@@ -9,6 +9,7 @@
 	\usetikzlibrary{calc}
 	\usetikzlibrary{decorations.pathreplacing}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
 \usepackage{setspace}
 \usepackage[absolute,overlay]{textpos}
@@ -35,15 +36,15 @@
 \definecolor{maingray}{RGB}{144,144,144}
 
 %Define CV Variables
-\newcommand{\cvfirstname}{Samuel}
-\newcommand{\cvlastname}{Cabral Cruz}
-\newcommand{\cvtitle}{B. Sc. Actuarial Sciences}
-\newcommand{\cvbirthdate}{May 14, 1992}
-\newcommand{\cvemail}{samuelcabralcruz@gmail.com}
-\newcommand{\cvphonenumber}{(581) 996-2130}
-\newcommand{\cvaddress}{249, Route 138,\newline Saint-Augustin-de-Desmaures}
+\newcommand{\cvfirstname}{Stéphane}
+\newcommand{\cvlastname}{Caron}
+\newcommand{\cvtitle}{B. Sc Actuariat}
+\newcommand{\cvbirthdate}{1er Octobre 1992}
+\newcommand{\cvemail}{ste.caron@icloud.com}
+\newcommand{\cvphonenumber}{(581) 997-5006}
+\newcommand{\cvaddress}{113 des traversiers,\newline Lévis}
 \newcommand{\cvlocation}{Quebec, Canada}
-\newcommand{\cvlinkedin}{https://www.linkedin.com/in/samuel-cabral-cruz-42b84a117}
+\newcommand{\cvlinkedin}{https://www.linkedin.com/in/stéphane-caron-45828267/}
 \newcommand{\cvwhitewords}{Agile,Applications,ASP.NET,Build,C\#,Code,Collaborate,Data,Data Scientist,
 Design,Development,Engineering,Environment,Java,Javascript,Knowledge,Machine Learning,Mobile,.NET,Product,
 Projects,Software,Solutions,SQL,Team,Technologies,Testing,Tools,Web}
@@ -128,7 +129,7 @@ Projects,Software,Solutions,SQL,Team,Technologies,Testing,Tools,Web}
 
 %Command to create section Title
 \newcommand\sectiontitle[1]{
-	\bfseries\LARGE
+	% \bfseries\LARGE
 	\textcolor{mainblue}{\substr{#1}{1}{3}}%
 	\textcolor{black}{\substr{#1}{4}{end}}
 	\normalfont\normalsize}
@@ -137,7 +138,7 @@ Projects,Software,Solutions,SQL,Team,Technologies,Testing,Tools,Web}
 \newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node[circle,scale=0.01] (#1) {};}
 
 %Command to insert a new Education Statement
-\newcommand{\EduStatement}[5]{
+\newcommand{\EduStatement}[6]{
 	\normalfont\normalsize
 	\vspace{-\baselineskip}
 	\tikzmark{mark1}
@@ -147,10 +148,6 @@ Projects,Software,Solutions,SQL,Team,Technologies,Testing,Tools,Web}
 	\textcolor{mainblue}{#3\small\textbf{\hfill [#1 - #2]}}\\
 	\normalfont\normalsize
 	\tikzmark{mark2}
-%	\begin{tikzpicture}[overlay, remember picture]
-%		\draw [decoration={brace,mirror,raise=10pt,amplitude=1em},decorate,ultra thick,mainblue]
-% 		(mark1) --  (mark2);
-%	\end{tikzpicture}
 	}
 
 %Command to insert a new Experience Statement
@@ -197,7 +194,7 @@ urlcolor={blue!80!black}}
 \end{textblock}
 
 \begin{textblock}{7}(0.5, 3.75)
-	\profilesection{General Information}	
+	\profilesection{Informations générales}	
 	\vspace{-\baselineskip}
 	\begin{table}
 		\begin{tabularx}{7cm}{cX}
@@ -210,22 +207,20 @@ urlcolor={blue!80!black}}
 		\end{tabularx}
 	\end{table}
 
-	\profilesection{Languages}
+	\profilesection{Langue}
 	\vspace{-\baselineskip}
 	\begin{table}
 		\large
 		\begin{tabularx}{7cm}{Xc}
-			English & \starscale{3.6}{5}\\
-			French & \starscale{4.4}{5}\\
-			Spanish & \starscale{1.5}{5}\\
-			American Sign \newline Language & \starscale{2}{5}\\
+			Français & \starscale{4.5}{5}\\
+			Anglais & \starscale{3.5}{5}\\
 		\end{tabularx}
 	\end{table}
 
-	\profilesection{Programming Skills}
-	\skillbar{AHK/4,HTML/1.5,Git \faGithub/3.5,\LaTeX/4,R/5.5,Java/1.5,Python/2.5,C\raisebox{0.5ex}{++}/2,VBA/6,SAS/5.7,SQL/5.2}
-\textbf{Note:} \\
-Currently following courses to increase my \newline knowledge in C\raisebox{0.5ex}{++} and Python
+	\profilesection{Connaissances en programmation}
+	\skillbar{Git \faGithub/3.5,\LaTeX/3,R/6,Python/2.5,VBA/5.5,SAS/5.5,SQL/5}
+\textbf{En cours d'apprentissage:} \\
+Python et programmation GPU
 \end{textblock}
 
 \begin{textblock}{11.35}(9.25, 0.25)
@@ -234,7 +229,7 @@ Currently following courses to increase my \newline knowledge in C\raisebox{0.5e
 
 \begin{textblock}{11.35}(9.25, 1)
 	\sectiontitle{Education}
-	\EduStatement{01/2017}{Present}{University Laval}{Bachelor Degree}{Software Engineering}
+	\EduStatement{09/2017}{Pr\'esent}{Université Laval}{Maîtrise}{Statistiques}\\
 	\vspace{-10pt}
 	\EduStatement{09/2012}{05/2015}{University Laval}{Bachelor Degree}{Actuarial Sciences}\\
 	\sectiontitle{Experience}
