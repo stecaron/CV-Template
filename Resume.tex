@@ -3,6 +3,7 @@
 
 %Required Packages
 \usepackage{xcolor}
+\usepackage{xstring}
 \usepackage{fontawesome}
 \usepackage{tikz}
 	\usetikzlibrary{shapes.geometric}
@@ -129,9 +130,10 @@ Projects,Software,Solutions,SQL,Team,Technologies,Testing,Tools,Web}
 
 %Command to create section Title
 \newcommand\sectiontitle[1]{
-	% \bfseries\LARGE
-	\textcolor{mainblue}{\substr{#1}{1}{3}}%
-	\textcolor{black}{\substr{#1}{4}{end}}
+	\bfseries\LARGE
+	\StrLen{#1}[\longueur]
+	\textcolor{mainblue}{\StrMid{#1}{1}{3}}%
+	\textcolor{black}{\StrMid{#1}{4}{\longueur}}%
 	\normalfont\normalsize}
 
 %Command to let mark in order to trace tikz picture
@@ -159,16 +161,12 @@ Projects,Software,Solutions,SQL,Team,Technologies,Testing,Tools,Web}
 	#3\\
 	\large{\textbf{#4}}\\
 	\small
-	\textcolor{mainblue}{\textbf{Accomplishments \hfill [#1 - #2]}}
+	\textcolor{mainblue}{\textbf{Réalisations \hfill [#1 - #2]}}
 	\begin{itemize}[label=\textcolor{mainblue}{\textbullet},topsep=0pt,partopsep=0pt,itemsep=0pt,parsep=0pt]}
 		{\vspace{-\baselineskip}
 	\end{itemize}
 	\normalfont\normalsize
 	\tikzmark{mark2}
-%	\begin{tikzpicture}[overlay, remember picture]
-%		\draw [decoration={brace,mirror,raise=10pt,amplitude=1em},decorate,ultra thick,mainblue]
-% 		(mark1) --  (mark2);
-%	\end{tikzpicture}
 	\\}
 
 \pagestyle{empty} % Disable headers and footers
@@ -228,21 +226,19 @@ Python et programmation GPU
 \end{textblock}
 
 \begin{textblock}{11.35}(9.25, 1)
-	\sectiontitle{Education}
-	\EduStatement{09/2017}{Pr\'esent}{Université Laval}{Maîtrise}{Statistiques}\\
+  \sectiontitle{Éducation}
+	\EduStatement{09/2017}{Present}{Université Laval}{Maîtrise}{Statistiques}\\
 	\vspace{-10pt}
-	\EduStatement{09/2012}{05/2015}{University Laval}{Bachelor Degree}{Actuarial Sciences}\\
-	\sectiontitle{Experience}
-	\begin{ExpStatement}{05/2013}{12/2016}{Desjardins, General Insurance Group}{Actuarial Analyst - Property Ratemaking}
-		\item Segmentation and pricing models revision of the rented and vacant condo coverages
-		\item Implementation of a new segmentation for the endorsement 16c - Water Damage (Tenants and Condos)
-		\item Creation of multiple programs in order to identify, extract, produce and validate the information contained in the pricing system
-		\item Integration of State Farm's Canadian book of business following the acquisition of 2014
-		\item Production of the assumptions surrounding State Farm's portfolio for the 2017 \newline Budget
-		\item Creation of a dashboard for the monitoring of multiple KPIs to ensure the quality of the conversion solution
+	\EduStatement{09/2012}{05/2015}{Université Laval}{Baccalauréat}{Actuariat}
+	\\
+	\sectiontitle{Expérience}
+	\begin{ExpStatement}{05/2015}{Présent}{Promutuel Assurance}{Analyste en actuariat}
+		\item Développement de rapports dynamiques \texttt{RMarkdown} et \texttt{shiny} pour suivre les résultats d'assurance.
+		\item Création de plusieurs programmes servant à extraire et valider les données de conduite du programme de télématique.
+		\item Plusieurs travaux en lien avec le développement et l'intégration du produit télématique.
 	\end{ExpStatement}
 	\\
-	\sectiontitle{Certificates}
+	\sectiontitle{Certificats/Examens}
 	\vspace{3pt}
 	\begin{table}
 		\begin{tabularx}{\textwidth}{A{1.5cm}XM{1.5cm}}
