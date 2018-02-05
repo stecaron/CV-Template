@@ -43,8 +43,8 @@
 \newcommand{\cvbirthdate}{1er Octobre 1992}
 \newcommand{\cvemail}{ste.caron@icloud.com}
 \newcommand{\cvphonenumber}{(581) 997-5006}
-\newcommand{\cvaddress}{113 des traversiers,\newline Lévis}
-\newcommand{\cvlocation}{Quebec, Canada}
+\newcommand{\cvaddress}{113 des traversiers,\newline Lévis, Québec, Canada}
+\newcommand{\gitlink}{https://github.com/stecaron}
 \newcommand{\cvlinkedin}{https://www.linkedin.com/in/stéphane-caron-45828267/}
 \newcommand{\cvwhitewords}{Agile,Applications,ASP.NET,Build,C\#,Code,Collaborate,Data,Data Scientist,
 Design,Development,Engineering,Environment,Java,Javascript,Knowledge,Machine Learning,Mobile,.NET,Product,
@@ -140,13 +140,12 @@ Projects,Software,Solutions,SQL,Team,Technologies,Testing,Tools,Web}
 \newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node[circle,scale=0.01] (#1) {};}
 
 %Command to insert a new Education Statement
-\newcommand{\EduStatement}[6]{
+\newcommand{\EduStatement}[4]{
 	\normalfont\normalsize
 	\vspace{-\baselineskip}
 	\tikzmark{mark1}
 	\vspace{12pt}\\
-	#4\\
-	\large{\textbf{#5}}\\
+	\large{\textbf{#4}}\\
 	\textcolor{mainblue}{#3\small\textbf{\hfill [#1 - #2]}}\\
 	\normalfont\normalsize
 	\tikzmark{mark2}
@@ -162,7 +161,7 @@ Projects,Software,Solutions,SQL,Team,Technologies,Testing,Tools,Web}
 	\large{\textbf{#4}}\\
 	\small
 	\textcolor{mainblue}{\textbf{Réalisations \hfill [#1 - #2]}}
-	\begin{itemize}[label=\textcolor{mainblue}{\textbullet},topsep=0pt,partopsep=0pt,itemsep=0pt,parsep=0pt]}
+	\begin{itemize}[label=\textcolor{mainblue}{\textbullet}]}
 		{\vspace{-\baselineskip}
 	\end{itemize}
 	\normalfont\normalsize
@@ -200,8 +199,8 @@ urlcolor={blue!80!black}}
 			\icon{\faAt}&\bfseries\href{mailto:\cvemail}\cvemail\\
 			\icon{\faPhone}&\cvphonenumber\\
 			\icon{\faHome}&\cvaddress\\
-			\icon{\faMapMarker}&\cvlocation\\
-			\icon{\faLinkedin}&\href{\cvlinkedin}{See Profile}\\
+			\icon{\faGithub}&\href{\gitlink}{{Voir Profil}}\\
+			\icon{\faLinkedin}&\href{\cvlinkedin}{Voir Profil}\\
 		\end{tabularx}
 	\end{table}
 
@@ -216,7 +215,7 @@ urlcolor={blue!80!black}}
 	\end{table}
 
 	\profilesection{Connaissances en programmation}
-	\skillbar{Git \faGithub/3.5,\LaTeX/3,R/6,Python/2.5,VBA/5.5,SAS/5.5,SQL/5}
+	\skillbar{Git \faGithub/4,\LaTeX/3,R/6,Python/1,VBA/4.5,SAS/5,SQL/4.5}
 \textbf{En cours d'apprentissage:} \\
 Python et programmation GPU
 \end{textblock}
@@ -227,9 +226,9 @@ Python et programmation GPU
 
 \begin{textblock}{11.35}(9.25, 1)
   \sectiontitle{Éducation}
-	\EduStatement{09/2017}{Present}{Université Laval}{Maîtrise}{Statistiques}\\
-	\vspace{-10pt}
-	\EduStatement{09/2012}{05/2015}{Université Laval}{Baccalauréat}{Actuariat}
+	\EduStatement{09/2017}{Present}{Université Laval}{Maîtrise en statistiques}\\
+	\vspace{-15pt}
+	\EduStatement{09/2012}{05/2015}{Université Laval}{Baccalauréat en actuariat}
 	\\
 	\sectiontitle{Expérience}
 	\begin{ExpStatement}{05/2015}{Présent}{Promutuel Assurance}{Analyste en actuariat}
@@ -240,32 +239,15 @@ Python et programmation GPU
 	\\
 	\sectiontitle{Certificats/Examens}
 	\vspace{3pt}
-	\begin{table}
-		\begin{tabularx}{\textwidth}{A{1.5cm}XM{1.5cm}}
-			\toprule
-			\centering\textcolor{black}{Exam}&\centering\textbf{Description}&\textbf{Date}\\
-			\midrule
-			P/1&Probability&01/2013\\
-			FM/2&Financial Mathematics&06/2013\\
-			MFE/3F&Models for Financial Economics&11/2013\\
-			MLC/3LC&Models for Life Contingencies&10/2014\\
-			3ST&Models for Stochastic Processes and Statistics&12/2014\\
-			C/4&Construction and Evaluation of Actuarial Models&02/2014\\
-			CA1&CAS Risk Management and Insurance Operations&09/2014\\
-			CA2&CAS Insurance Accounting, Coverage Analysis, Insurance Law, and Insurance Regulation&01/2015\\
-			ECON&VEE Economics&08/2015\\
-			CORPFIN&VEE Corporate Finance&08/2015\\
-			APPSTATS&VEE Applied Statistics&08/2015\\
-			EXAM 5&Basic Techniques for Ratemaking and Estimating Claim Liabilities&12/2015\\
-			COP&Course on Professionalism&12/2016\\
-			\bottomrule
- 		\end{tabularx}
- 	\end{table}
+	\begin{itemize}
+	    \item Associate of the Casualty Actuarial Society (ACAS) \hfill \small\textbf{\textcolor{mainblue}{08/2017}}\normalfont
+	    \item École d'hiver IVADO/MILA en apprentissage profond \hfill \small\textbf{\textcolor{mainblue}{03/2018}}\normalfont
+	  \end{itemize}
  	\vspace{\baselineskip}
-	\sectiontitle{Working\ Skills\ \&\ Strengths}\\
-	\mybox{Modelisation} \mybox{Business, Risk and Cost-Benefit Analysis} \mybox{Creative} \mybox{Passionate}\\
-	\mybox{Willis Towers Watson: Pricing Softwares} \mybox{Hard-Worker} \mybox{Validation Process}\\
-	\mybox{Business Optimization} \mybox{Critical-Thinking} \mybox{User Experience} \mybox{Quick Leaner}\\
+	\sectiontitle{Forces et compétences}\\
+	\mybox{Modélisation} \mybox{Visualisation} \mybox{Créativité} \mybox{Passionné}\\
+	\mybox{Rapports et présentation} \mybox{Autodidacte} \mybox{Travail d'équipe} \\
+	\mybox{Business Optimization} \mybox{Esprit critique} \mybox{Ih} \mybox{Quick Leaner}\\
 	\newline
 	\sectiontitle{Achievements}\\
 	Participation to Academic Actuarial Competitions - ActuLab
